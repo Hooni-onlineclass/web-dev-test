@@ -1,1 +1,29 @@
-<h1>Hooni Lab - Update Test Success!</h1>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hooni Lab - JS Test</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 50px; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 5px; }
+        #message { color: #28a745; font-weight: bold; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Vanilla JS 실험실</h1>
+    <button id="btn">클릭해 보세요!</button>
+    <p id="message"></p>
+
+    <script>
+        // 바닐라 JS: 버튼을 찾아서 클릭 이벤트를 연결합니다.
+        const button = document.getElementById('btn');
+        const display = document.getElementById('message');
+
+        button.addEventListener('click', () => {
+            display.innerText = "축하합니다! 자바스크립트가 정상 작동합니다! 🚀";
+            console.log("버튼이 클릭되었습니다.");
+        });
+    </script>
+</body>
+</html>
