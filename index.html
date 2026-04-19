@@ -4,32 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hooni Lab - Full Test</title>
+    <title>Hooni Lab - Control Center</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Hooni Lab 실험실 v3</h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#" onclick="changeContent('home')">홈</a></li>
-                    <li><a href="#" onclick="changeContent('about')">소개</a></li>
-                    <li><a href="#" onclick="changeContent('server')">서버현황</a></li>
-                </ul>
-            </nav>
+    <div class="portfolio-container">
+        <header class="profile-card">
+            <div class="avatar">H</div>
+            <h1>Hooni Lab</h1>
+            <p class="tagline">3-Node Linux Homelab & AI Automation</p>
         </header>
 
-        <main id="content-area">
-            <h2>환영합니다!</h2>
-            <p>이곳은 윈도우에서 프론트엔드를 실험하는 공간입니다.</p>
-        </main>
+        <section class="intro">
+            <h2><i class="fas fa-network-wired"></i> System Overview</h2>
+            <p>Cloudflare Tunnel과 Ingress를 통해 독립적으로 운영되는 서버망입니다.</p>
+        </section>
+
+        <section class="projects">
+            <h2><i class="fas fa-external-link-alt"></i> Active Services</h2>
+            <div class="project-grid">
+                <div class="service-card" onclick="window.open('https://hooni.xyz', '_blank')">
+                    <i class="fas fa-home"></i>
+                    <h3>Main Home</h3>
+                    <p>hooni.xyz</p>
+                </div>
+                <div class="service-card" onclick="window.open('https://prompt.hooni.xyz', '_blank')">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI Prompt</h3>
+                    <p>prompt.hooni.xyz</p>
+                </div>
+                <div class="service-card" onclick="window.open('https://iot.hooni.xyz', '_blank')">
+                    <i class="fas fa-microchip"></i>
+                    <h3>IoT Control</h3>
+                    <p>iot.hooni.xyz</p>
+                </div>
+                <div class="service-card" onclick="window.open('https://hooni3.hooni.xyz', '_blank')">
+                    <i class="fas fa-server"></i>
+                    <h3>Server 3</h3>
+                    <p>hooni3.hooni.xyz</p>
+                </div>
+            </div>
+        </section>
 
         <footer>
-            <p>&copy; 2026 Hooni Online Class. All rights reserved.</p>
+            <p>&copy; 2026 Hooni. All Services are Private & Active.</p>
         </footer>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
