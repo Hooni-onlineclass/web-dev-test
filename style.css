@@ -47,3 +47,33 @@ footer { text-align: center; font-size: 0.75rem; color: #64748b; margin-top: 20p
     background: #818cf8; /* 호버 시 보라색 계열로 강조 */
     color: white;
 }
+
+/* 학생용 샌드박스 그리드 설정 */
+.sandbox-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)) !important;
+}
+
+.student-card {
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #38bdf8;
+    border: 1px solid #334155;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.student-card:hover {
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+.service-card.admin {
+    grid-column: 1 / -1; /* 관리자 카드는 한 줄 전체 차지 */
+    background: #4834d4;
+    color: white;
+}
