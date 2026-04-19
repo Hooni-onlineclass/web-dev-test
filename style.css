@@ -1,38 +1,39 @@
 
+/* 기존 style.css에 덮어쓰기 하세요 */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: #0f172a; color: #f1f5f9; font-family: 'Segoe UI', sans-serif; padding: 40px 20px; }
-.portfolio-container { max-width: 800px; margin: 0 auto; }
+body { background: #0f172a; color: #f1f5f9; font-family: 'Segoe UI', sans-serif; padding: 20px; }
+.portfolio-container { max-width: 900px; margin: 0 auto; }
 
-.profile-card { text-align: center; padding: 40px; background: #1e293b; border-radius: 24px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-.avatar { width: 80px; height: 80px; background: linear-gradient(135deg, #38bdf8, #818cf8); border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: bold; }
+.profile-card { text-align: center; padding: 30px; background: #1e293b; border-radius: 24px; margin-bottom: 20px; border-bottom: 5px solid #38bdf8; }
+.avatar { width: 70px; height: 70px; background: linear-gradient(135deg, #38bdf8, #818cf8); border-radius: 50%; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; font-size: 25px; font-weight: bold; }
 
-section { background: #1e293b; padding: 25px; border-radius: 20px; margin-bottom: 20px; }
-h2 { color: #38bdf8; margin-bottom: 20px; font-size: 1.1rem; }
+section { background: #1e293b; padding: 20px; border-radius: 20px; margin-bottom: 15px; }
+h2 { color: #38bdf8; margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
 }
 
 .service-card {
     background: #334155;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 15px;
+    border-radius: 12px;
     text-align: center;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.2s ease-in-out;
     border: 1px solid #475569;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.03);
     background: #38bdf8;
     color: #0f172a;
 }
 
-.service-card i { font-size: 2rem; margin-bottom: 10px; }
-.service-card h3 { font-size: 1rem; margin-bottom: 5px; }
-.service-card p { font-size: 0.8rem; opacity: 0.8; }
+.service-card i { font-size: 1.5rem; margin-bottom: 8px; }
+.service-card h3 { font-size: 0.95rem; margin-bottom: 4px; }
+.service-card p { font-size: 0.75rem; opacity: 0.7; }
 
-footer { text-align: center; font-size: 0.8rem; color: #64748b; margin-top: 20px; }
+footer { text-align: center; font-size: 0.75rem; color: #64748b; margin-top: 20px; padding-bottom: 20px; }
