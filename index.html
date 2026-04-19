@@ -3,76 +3,33 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Hooni Lab - Interactive JS</title>
-    <style>
-        /* 트랜지션 효과로 배경색 변경을 부드럽게 만듭니다 */
-        body { 
-            font-family: 'Malgun Gothic', sans-serif; 
-            text-align: center; 
-            padding-top: 100px; 
-            transition: background-color 0.5s ease; 
-        }
-        .container {
-            background: white;
-            display: inline-block;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        button { 
-            padding: 15px 30px; 
-            font-size: 18px; 
-            cursor: pointer; 
-            background: #333; 
-            color: white; 
-            border: none; 
-            border-radius: 8px;
-            transition: transform 0.1s;
-        }
-        button:active { transform: scale(0.95); }
-        #message { 
-            font-size: 1.5rem;
-            font-weight: bold; 
-            margin-top: 30px; 
-            min-height: 1.5em;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hooni Lab - Full Test</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Hooni의 바닐라 JS 실험실 v2</h1>
-        <p>버튼을 누를 때마다 색상과 메시지가 변합니다.</p>
-        <button id="btn">새로운 메시지 보기</button>
-        <div id="message"></div>
+        <header>
+            <h1>Hooni Lab 실험실 v3</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" onclick="changeContent('home')">홈</a></li>
+                    <li><a href="#" onclick="changeContent('about')">소개</a></li>
+                    <li><a href="#" onclick="changeContent('server')">서버현황</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="content-area">
+            <h2>환영합니다!</h2>
+            <p>이곳은 윈도우에서 프론트엔드를 실험하는 공간입니다.</p>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Hooni Online Class. All rights reserved.</p>
+        </footer>
     </div>
 
-    <script>
-        const button = document.getElementById('btn');
-        const display = document.getElementById('message');
-        const body = document.body;
-
-        // 랜덤하게 보여줄 메시지 배열
-        const messages = [
-            "오늘도 코딩 열공 중! 🔥",
-            "바닐라 JS도 생각보다 재밌죠? 😊",
-            "서버 1, 2, 3 모두 정상 가동 중! 🚀",
-            "Hooni Lab은 24시간 열려있습니다. 💻",
-            "이 메시지는 랜덤으로 나옵니다! ✨"
-        ];
-
-        // 랜덤 배경색 배열
-        const colors = ['#f8d7da', '#d1ecf1', '#d4edda', '#fff3cd', '#e2e3e5'];
-
-        button.addEventListener('click', () => {
-            // 랜덤 인덱스 생성
-            const randomIndex = Math.floor(Math.random() * messages.length);
-            
-            // 메시지 및 배경색 변경
-            display.innerText = messages[randomIndex];
-            body.style.backgroundColor = colors[randomIndex];
-            
-            console.log(`${randomIndex + 1}번째 스타일로 변경됨`);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
