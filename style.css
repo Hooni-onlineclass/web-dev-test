@@ -37,3 +37,13 @@ h2 { color: #38bdf8; margin-bottom: 15px; font-size: 1rem; text-transform: upper
 .service-card p { font-size: 0.75rem; opacity: 0.7; }
 
 footer { text-align: center; font-size: 0.75rem; color: #64748b; margin-top: 20px; padding-bottom: 20px; }
+
+/* style.css 하단에 추가 */
+.service-card.sandbox {
+    border: 1px dashed #38bdf8; /* 실습실 느낌을 위해 점선 테두리 */
+}
+
+.service-card.sandbox:hover {
+    background: #818cf8; /* 호버 시 보라색 계열로 강조 */
+    color: white;
+}
