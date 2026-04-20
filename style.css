@@ -1,8 +1,7 @@
-
 /* 기본 레이아웃 및 테마 */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background: #0f172a; color: #f1f5f9; font-family: 'Segoe UI', sans-serif; padding: 20px; line-height: 1.6; }
-.portfolio-container { max-width: 900px; margin: 0 auto; }
+.portfolio-container { max-width: 1100px; margin: 0 auto; } /* 4개를 위해 너비를 조금 더 확보 */
 
 /* 프로필 상단 카드 */
 .profile-card { 
@@ -27,17 +26,19 @@ body { background: #0f172a; color: #f1f5f9; font-family: 'Segoe UI', sans-serif;
 section { background: #1e293b; padding: 20px; border-radius: 20px; margin-bottom: 15px; }
 h2 { color: #38bdf8; margin-bottom: 15px; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 
-/* 프로젝트 그리드 설정 */
+/* [수정] 프로젝트 그리드 설정 - 4개가 한 줄에 들어오도록 조정 */
+/* style.css 수정 */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* 뱃지를 위해 최소 너비 소폭 확장 */
-    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 15px;
+    justify-content: center; /* 카드가 부족할 때 중앙으로 모아주는 속성 */
 }
 
 /* 서비스 카드 기본 스타일 */
 .service-card {
     background: #334155;
-    padding: 18px 15px;
+    padding: 20px 15px;
     border-radius: 12px;
     text-align: center;
     cursor: pointer;
@@ -47,24 +48,25 @@ h2 { color: #38bdf8; margin-bottom: 15px; font-size: 1rem; text-transform: upper
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 170px; /* 모든 카드의 높이를 통일하여 균형 유지 */
 }
 
 .service-card:hover {
-    transform: translateY(-5px); /* 위로 살짝 뜨는 효과 */
+    transform: translateY(-5px); 
     background: #38bdf8;
     color: #0f172a;
     border-color: #38bdf8;
 }
 
 .service-card i { font-size: 1.5rem; margin-bottom: 10px; }
-.service-card h3 { font-size: 1rem; margin-bottom: 4px; }
-.service-card p { font-size: 0.75rem; opacity: 0.8; margin-bottom: 10px; }
+.service-card h3 { font-size: 1rem; margin-bottom: 6px; }
+.service-card p { font-size: 0.75rem; opacity: 0.8; margin-bottom: 12px; }
 
-/* [신규] 백엔드 기술 스택 뱃지 스타일 */
+/* 백엔드 기술 스택 뱃지 스타일 */
 .tech-stack {
     display: inline-block;
     font-size: 0.65rem;
-    background: rgba(56, 189, 248, 0.15); /* 연한 파란색 투명 배경 */
+    background: rgba(56, 189, 248, 0.15); 
     color: #38bdf8;
     padding: 3px 8px;
     border-radius: 6px;
@@ -73,7 +75,6 @@ h2 { color: #38bdf8; margin-bottom: 15px; font-size: 1rem; text-transform: upper
     transition: all 0.2s;
 }
 
-/* 호버 시 뱃지 색상 반전 효과 */
 .service-card:hover .tech-stack {
     background: rgba(15, 23, 42, 0.8);
     color: #ffffff;
@@ -82,7 +83,7 @@ h2 { color: #38bdf8; margin-bottom: 15px; font-size: 1rem; text-transform: upper
 
 /* 샌드박스 전용 스타일 */
 .service-card.admin {
-    grid-column: 1 / -1; /* 한 줄 전체 차지 */
+    grid-column: 1 / -1; 
     background: #4834d4;
     color: white;
     border: none;
